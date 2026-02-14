@@ -92,7 +92,7 @@ def laser_puzzle() -> bool:
     return False
 
 
-# Puzzle 2: Caesar Cipher (same as before)
+# Puzzle 2: Caesar Cipher (shift by 3)
 
 def shift_char_back_3(ch: str) -> str:
     """
@@ -100,8 +100,6 @@ def shift_char_back_3(ch: str) -> str:
     - Preserve case: 'D' -> 'A', 'd' -> 'a'
     - Wrap around: 'A' -> 'X', 'b' -> 'y'
     - Non-letters should be returned unchanged (spaces, punctuation, digits).
-
-    Hint: Use modulo operator (%) to wrap around the alphabet!
     """
     # TODO
     return ch
@@ -114,18 +112,19 @@ def caesar_decode(ciphertext: str) -> str:
     Example:
         "Khoor" -> "Hello"
     """
-    # TODO
+    # TODO: build a decoded string character-by-character (loop)
     return ""
 
 def cipher_puzzle() -> bool:
     """
-    - There is an encoded message
-    - Decode it using caesar_decode
-    - If the decoded text contains the correct 'key phrase', it passes
+    Interactive puzzle:
+    - Give students an encoded message
+    - Ask them to decode it using caesar_decode
+    - If their decoded text contains the correct 'key phrase', they pass
 
-    NOTE: Key Phrase can be any word in the encoded message.
+    NOTE: For the lab, you can make the key phrase obvious or hidden.
     """
-    print("\n========== Puzzle 2: Caesar Cipher ==========")
+    print("\n=== Puzzle 2: Caesar Cipher ===")
 
     encoded = "Wkh nhb frgh lv: FODVVURRP"
     print("A note on the wall reads:")
@@ -137,53 +136,38 @@ def cipher_puzzle() -> bool:
     return False
 
 
-# Puzzle 3: Fibonacci Missing Number
+# Puzzle 3: Fibonacci
 
-def is_fibonacci_sequence(seq: list[int]) -> bool:
+def fibonacci(n: int) -> list[int]:
     """
-    Return True if seq follows Fibonacci rule:
-        seq[i] == seq[i-1] + seq[i-2]   for all i >= 2
-    Otherwise return False.
+    Return a list of the first n Fibonacci numbers.
 
-    Example: [0,1,1,2,3,5] is True
-             [0,1,2,3] is False
-    """
-    # TODO
-    return False
+    Use this definition:
+    - fibonacci(1) -> [0]
+    - fibonacci(2) -> [0, 1]
+    - fibonacci(6) -> [0, 1, 1, 2, 3, 5]
 
-def find_missing_fibonacci(seq_with_missing: list[int | None]) -> int:
-    """
-    seq_with_missing contains exactly ONE missing value represented by None.
-    The list is supposed to be Fibonacci.
-
-    Return the missing number.
-
-    Examples:
-      [0, 1, None, 2, 3, 5] -> 1
-      [0, 1, 1, 2, None, 5] -> 3
-      [None, 1, 1, 2, 3, 5] -> 0
-      [0, 1, 1, 2, 3, None] -> 5
+    Hints:
+    - Handle small n carefully
+    - Use a loop to build the list
     """
     # TODO
-    return 0
+    return []
+
 
 def fibonacci_puzzle() -> bool:
     """
     Interactive puzzle:
-    - A sequence is shown with a missing value
-    - Student computes the missing value using find_missing_fibonacci
-    - If correct, they pass
+    - Ask for n
+    - Generate the first n Fibonacci numbers
+    - The "door code" is the last number in the list
     """
-    print("\n========== Puzzle 3: Fibonacci Missing Number ==========")
+    print("\n=== Puzzle 3: Fibonacci Door Code ===")
 
-    # Example puzzle sequence (you can change this)
-    puzzle_seq = [0, 1, 1, 2, None, 5, 8]
-    print("Sequence:", puzzle_seq)
-    print("One number is missing (shown as None).")
-
-    # TODO: ask student for the missing number
-    # TODO: compare with find_missing_fibonacci(puzzle_seq)
-    # TODO: print messages
+    # TODO: get n from input and convert to int
+    # TODO: call fibonacci(n)
+    # TODO: print the sequence
+    # TODO: print the "door code" as the last number
     return False
 
 
@@ -194,13 +178,14 @@ def run_escape_room() -> None:
     Runs all 3 puzzles in order.
     Students escape if they pass all puzzles.
     """
-    print("Welcome to the Escape Room!")
+    print("Welcome to the Python Escape Room!")
     print("Solve the puzzles by completing the functions in this file.")
 
     # TODO: call each puzzle function
     # TODO: only proceed if the previous puzzle was passed
     # TODO: print a victory message if all are passed
     pass
+
 
 if __name__ == "__main__":
     run_escape_room()
