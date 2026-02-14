@@ -39,7 +39,7 @@ The final number in the sequence unlocks the door.
 ---
 
 ## Submission
-Please submit your work in this google form: [Google Form]([https://example.com](https://docs.google.com/forms/d/e/1FAIpQLSd8KWzgms12T5Cz6st3Cwilk_YnI6v6qQfDAv0xxDk1dstTNg/viewform?usp=publish-editor))
+Please submit your work in this google form: https://docs.google.com/forms/d/e/1FAIpQLSd8KWzgms12T5Cz6st3Cwilk_YnI6v6qQfDAv0xxDk1dstTNg/viewform?usp=publish-editor
 
 ## 🛠 How to Work
 
